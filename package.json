@@ -1,0 +1,12 @@
+{
+  "name": "blog-app-root",
+  "version": "1.0.0",
+  "description": "Root configuration for Blog-App deployment",
+  "scripts": {
+    "start": "node backend/server.js",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "postinstall": "npm run install-backend && npm run install-frontend && npm run build-frontend"
+  }
+}
