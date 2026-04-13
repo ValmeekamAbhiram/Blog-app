@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router";
 import {useEffect} from 'react'
 import { useAuth } from "../store/authStore";
+import { pageBackground } from "../styles/Common";
 
 function RootLayout() {
 
@@ -15,9 +16,9 @@ function RootLayout() {
 
 
   return (
-    <div>
+    <div className={pageBackground}>
       <Header />
-        <div className="min-h-screen mx-32">
+        <div className="max-w-5xl mx-auto">
           <Outlet />
         </div>
       <Footer />

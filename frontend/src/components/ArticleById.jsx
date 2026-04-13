@@ -170,7 +170,7 @@ function ArticleByID() {
               className={inputClass}
               placeholder="Write your comment here..."
             />
-            <button type="submit" className="bg-amber-600 text-white px-5 py-2 rounded-2xl mt-5">
+            <button type="submit" className="bg-[#0066cc] text-white px-5 py-2 rounded-2xl mt-5 hover:bg-[#004499] transition-colors">
               Add comment
             </button>
           </form>

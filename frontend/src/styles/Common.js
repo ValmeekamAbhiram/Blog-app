@@ -3,13 +3,13 @@
 // Inspired by apple.com — no gradients, no shadows, pure typography & spacing
 
 // ─── Layout ───────────────────────────────────────────
-export const pageBackground = "bg-white min-h-screen";
+export const pageBackground = "bg-slate-50 min-h-screen";
 export const pageWrapper = "max-w-5xl mx-auto px-6 py-16";
 export const section = "mb-14";
 
-// ─── Cards ────────────────────────────────────────────
+// ─── Cards ───────────────────────────────────────────
 export const cardClass =
-  "bg-[#f5f5f7] rounded-2xl p-7 hover:bg-[#ebebf0] transition-colors duration-200 cursor-pointer";
+  "bg-white border border-slate-200/60 rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-200 cursor-pointer";
 
 // ─── Typography ───────────────────────────────────────
 export const pageTitleClass = "text-5xl font-bold text-[#1d1d1f] tracking-tight leading-none mb-2";
@@ -27,7 +27,7 @@ export const secondaryBtn =
 export const ghostBtn = "text-[#0066cc] font-medium hover:text-[#004499] transition-colors cursor-pointer text-sm";
 
 // ─── Forms ────────────────────────────────────────────
-export const formCard = "bg-[#f5f5f7] rounded-2xl p-10 max-w-4xl mx-auto";
+export const formCard = "bg-white border border-slate-200 rounded-2xl p-10 max-w-4xl mx-auto shadow-sm";
 export const formTitle = "text-2xl font-bold text-[#1d1d1f] tracking-tight text-center mb-7";
 export const labelClass = "text-xs font-medium text-[#6e6e73] mb-1.5 block";
 export const inputClass =
@@ -38,7 +38,7 @@ export const submitBtn =
 
 // ─── Navbar ───────────────────────────────────────────
 export const navbarClass =
-  "bg-white/85 backdrop-blur-xl backdrop-saturate-150 border-b border-[#e8e8ed] px-8 h-[52px] flex items-center sticky top-0 z-50";
+  "bg-white/90 backdrop-blur-md border-b border-slate-200 px-8 h-[52px] flex items-center sticky top-0 z-50 shadow-sm";
 export const navContainerClass = "max-w-5xl mx-auto w-full flex items-center justify-between";
 export const navBrandClass = "text-base font-semibold text-[#1d1d1f] tracking-tight";
 export const navLinksClass = "flex items-center gap-7";
@@ -49,7 +49,7 @@ export const navLinkActiveClass = "text-[0.8rem] text-[#0066cc] font-medium";
 //export const articleGrid        = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e8e8ed] border border-[#e8e8ed] rounded-2xl overflow-hidden"
 export const articleGrid = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6";
 export const articleCardClass =
-  "bg-[#f5f5f7] p-7 hover:bg-[#ebebf0] transition-colors duration-200 flex flex-col gap-2.5 cursor-pointer";
+  "bg-white border border-slate-200/60 rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-slate-300/80 transition-all duration-200 flex flex-col gap-2.5 cursor-pointer";
 export const articleTitle = "text-base font-semibold text-[#1d1d1f] leading-snug tracking-tight";
 export const articleExcerpt = "text-sm text-[#6e6e73] leading-relaxed";
 export const articleMeta = "text-xs text-[#a1a1a6]";
@@ -67,13 +67,13 @@ export const articleCategory = "text-[0.7rem] font-semibold uppercase tracking-w
 export const articleMainTitle = "text-4xl font-bold text-[#1d1d1f] leading-tight tracking-tight";
 
 export const articleAuthorRow =
-  "flex items-center justify-between border-t border-b border-[#e8e8ed] py-4 text-sm text-[#6e6e73]";
+  "flex items-center justify-between border-t border-b border-slate-100 py-4 text-sm text-[#6e6e73]";
 
 export const authorInfo = "flex items-center gap-2 font-medium text-[#1d1d1f]";
 
 export const articleContent = "text-[#1d1d1f] leading-[1.9] text-[1rem] whitespace-pre-line mt-8";
 
-export const articleFooter = "border-t border-[#e8e8ed] mt-12 pt-6 text-sm text-[#a1a1a6]";
+export const articleFooter = "border-t border-slate-100 mt-12 pt-6 text-sm text-[#a1a1a6]";
 // ─── Article Actions ─────────────────────────────
 export const articleActions = "flex gap-3 mt-6";
 
@@ -99,7 +99,7 @@ export const emptyStateClass = "text-center text-[#a1a1a6] py-16 text-sm";
 // ─── Comments ───────────────────────────────────────
 export const commentsWrapper = "mt-12 flex flex-col gap-6";
 
-export const commentCard = "bg-[#f5f5f7] rounded-2xl p-5 transition hover:bg-[#ebebf0]";
+export const commentCard = "bg-white border border-slate-100 rounded-2xl p-5 shadow-sm transition hover:shadow-md";
 
 export const commentHeader = "flex items-center justify-between mb-2";
 
@@ -110,9 +110,9 @@ export const commentTime = "text-xs text-[#a1a1a6]";
 export const commentText = "text-[#1d1d1f] text-sm leading-relaxed mt-1";
 
 export const avatar =
-  "w-9 h-9 rounded-full bg-[#0066cc]/10 text-[#0066cc] flex items-center justify-center text-sm font-semibold";
+  "w-9 h-9 rounded-full bg-blue-50 text-[#0066cc] flex items-center justify-center text-sm font-semibold";
 
 export const commentUserRow = "flex items-center gap-3";
 
 // ─── Divider ──────────────────────────────────────────
-export const divider = "border-t border-[#e8e8ed] my-10";
+export const divider = "border-t border-slate-100 my-10";

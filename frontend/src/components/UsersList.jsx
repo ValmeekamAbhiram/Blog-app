@@ -50,7 +50,7 @@ function UsersList() {
             {user.profileImageUrl ? (
               <img src={user.profileImageUrl} className="w-12 h-12 rounded-full object-cover" alt="User" />
             ) : (
-              <div className="w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center font-bold text-gray-500">
+              <div className="w-12 h-12 rounded-full bg-blue-50 text-[#0066cc] flex items-center justify-center font-bold text-sm">
                 {user.firstName?.charAt(0).toUpperCase()}
               </div>
             )}
@@ -60,7 +60,7 @@ function UsersList() {
             </div>
           </div>
           
-          <div className="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
+          <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center">
              <span className={`text-xs font-bold px-2 py-1 rounded-md ${user.isUserActive ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
                 {user.isUserActive ? "ACTIVE" : "INACTIVE"}
              </span>
