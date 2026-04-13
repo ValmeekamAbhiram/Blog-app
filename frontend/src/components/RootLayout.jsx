@@ -16,9 +16,9 @@ function RootLayout() {
 
 
   return (
-    <div className={pageBackground}>
+    <div className={`${pageBackground} min-h-screen flex flex-col`}>
       <Header />
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto flex-1 w-full">
           <Outlet />
         </div>
       <Footer />
