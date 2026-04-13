@@ -15,7 +15,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app=exp()
+export const app=exp()
 
 //Cookie parser middleware
 app.use(cookieParser())
@@ -33,28 +33,32 @@ app.use("/author-api",authorApp)
 app.use("/admin-api",adminApp)
 app.use("/auth",commonApp)
 
-// Serve Frontend Static Files
-app.use(exp.static(path.join(__dirname, "../frontend/dist")));
+// served via Vercel Edge automatically
+// app.use(exp.static(path.join(__dirname, "../frontend/dist")));
 
-const connectDB=async ()=>{
-    try{
-        await connect(process.env.DB_URL)
-        console.log("DB Server connected")
-
-        //Assign port
-        const port=process.env.PORT || 5000
-        app.listen(port,()=>console.log(`Server listening on ${port}...`))
-    }catch(err){
-        console.log("Error in DB connection", err)
+// connection logic
+let isConnected = false;
+export const connectDB = async () => {
+    if (isConnected) return;
+    try {
+        await connect(process.env.DB_URL);
+        isConnected = true;
+        console.log("DB Server connected");
+    } catch (err) {
+        console.log("Error in DB connection", err);
     }
+};
+
+// Start server locally if not in Vercel
+if (process.env.NODE_ENV !== 'production') {
+    connectDB().then(() => {
+        const port = process.env.PORT || 5000;
+        app.listen(port, () => console.log(`Server listening on ${port}...`));
+    });
 }
 
-connectDB()
-
-// Handle React routing (Catch-all)
-app.get(/(.*)/, (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
-});
+// handled by vercel.json rewrites
+// app.get(/(.*)/, (req, res) => { ... });
 
 //Error handling middleware
 app.use((err, req, res, next) => {
